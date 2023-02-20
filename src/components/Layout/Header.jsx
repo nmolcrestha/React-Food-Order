@@ -1,17 +1,18 @@
 import mealImage from '../../assets/meals.jpg'; 
 import classes from './Header.module.css';
+import HeaderCartButton from './HeaderCartButton';
 
 const Header = props => {
-    return(
-        <>
+    return (
+      <>
         <header className={classes.header}>
-            <h1>ReactMeals</h1>
-            <button>Cart</button>
+          <h1>ReactMeals</h1>
+          <HeaderCartButton onClick={props.onShowCart} />
         </header>
-        <div className={classes['main-image']}>
-            <img src={mealImage} alt="A Table full of delecious meal" />
+        <div className={classes["main-image"]}>
+          <img src={mealImage} alt="A Table full of delecious meal" />
         </div>
-        </>
+      </>
     );
 }
 
